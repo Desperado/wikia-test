@@ -10,6 +10,8 @@ class HomePage
   text_field(:password, :name => "password")
   button(:signin, :css => "input.login-button")
   link(:desperado, :link => "Desperado2006")
+  span(:wiki_header, :class => "drop")
+  link(:add_video, :text => "Add a Video")
 
   def verify_page
     username_element.when_present(30)
@@ -27,6 +29,12 @@ class HomePage
   def login(username=USERNAME, password=PASS)
     fill_in_fields(username, password)
     signin
+  end
+
+  def contribute_video
+    wiki_header_element.when_visible(10).click
+    add_video
+
   end
 
   def verify_loginned
