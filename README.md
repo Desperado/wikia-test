@@ -43,43 +43,43 @@ Run all tests on chrome::
 
     cucumber BROWSER=chrome
 
-You should have something like
+You should have something like::
 
 
-Mac-mini-Ruslan:wikia-test ruslan$ cucumber BROWSER=chrome
-Using the default profile...
-Feature: Login to Wikia
-  As a user
-  I want to login to Wikia website
-  So I can work inside it
+    Mac-mini-Ruslan:wikia-test ruslan$ cucumber BROWSER=chrome
+    Using the default profile...
+    Feature: Login to Wikia
+        As a user
+        I want to login to Wikia website
+    So I can work inside it
 
-  Background:
-    Given I have opened the Home Page
+    Background:
+     Given I have opened the Home Page
 
-  Scenario: Successful login
-    Then I am redirected to the correct home page "http://testhomework.wikia.com/wiki/Test-homework_Wiki"
-    When I login with valid credentials
-    Then I became loginned
+    Scenario: Successful login
+        Then I am redirected to the correct home page "http://testhomework.wikia.com/wiki/Test-homework_Wiki"
+        When I login with valid credentials
+        Then I became loginned
 
-Feature: Upload video
-  As a user
-  While I am loginned to wikia
-  I want to make sure I can upload videos
+    Feature: Upload video
+    As a user
+    While I am loginned to wikia
+    I want to make sure I can upload videos
 
-  Background:
-    Given I have opened the Home Page
+    Background:
+        Given I have opened the Home Page
 
-  Scenario: Successful login
-    When I login with valid credentials
-    Then I became loginned
-    And I want to Contribute and add video
-    Then I am redirected to the WikiaVideoAdd page
-    And I upload the video "http://www.youtube.com/watch?v=h9tRIZyTXTI"
-    Then I verify that flash message text was correct
-    When I left click to file on the flash message
-    Then I am redirected to the page with video name
-    Then I verify that filename is the same as on the flash message
+    Scenario: Successful login
+        When I login with valid credentials
+        Then I became loginned
+        And I want to Contribute and add video
+        Then I am redirected to the WikiaVideoAdd page
+        And I upload the video "http://www.youtube.com/watch?v=h9tRIZyTXTI"
+        Then I verify that flash message text was correct
+        When I left click to file on the flash message
+        Then I am redirected to the page with video name
+        Then I verify that filename is the same as on the flash message
 
-2 scenarios (2 passed)
-14 steps (14 passed)
-0m35.782s
+    2 scenarios (2 passed)
+    14 steps (14 passed)
+    0m35.782s
