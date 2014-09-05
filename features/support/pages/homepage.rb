@@ -17,11 +17,13 @@ class HomePage
     username_element.when_present(30)
   end
 
+  def verify_url(page_url)
+    @browser.url.should == page_url
+  end
+
   def fill_in_fields(username, password)
     username_element.when_visible(30)
-
     @browser.element(:class => "ajaxLogin").hover
-
     self.username = username
     self.password = password
   end

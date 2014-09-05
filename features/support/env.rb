@@ -11,3 +11,4 @@ World(PageObject::PageFactory)
 
 USERNAME = 'Desperado2006'
 PASS = '77722255'
+VIDEONAME = 'The Best Classical Music In The World'
