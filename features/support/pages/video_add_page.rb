@@ -10,7 +10,6 @@ class VideoAddPage
 
   def verify_page_url
     sleep 3
-    print @browser.url
     @browser.url.should == "http://testhomework.wikia.com/wiki/Special:WikiaVideoAdd"
   end
 
