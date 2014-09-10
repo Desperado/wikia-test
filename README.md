@@ -1,6 +1,8 @@
 wikia-test
 ==========
 
+Wikia demo test based on Ruby, cucumber and https://github.com/cheezy/page-object/wiki/Elements
+
 The test consists of two scenarios
 
 1. **How to prepare environment**
