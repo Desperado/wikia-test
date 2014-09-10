@@ -1,5 +1,11 @@
+Given(/^I am already logined in the system$/) do
+  visit_page(HomePage).verify_page
+  on_page(HomePage).verify_url(page_url)
+  on_page(HomePage).login
+  on_page(HomePage).verify_loginned
+end
 
-And /^I want to Contribute and add video$/ do
+When /^I click Contribute and add video$/ do
   on_page(HomePage).contribute_video
 end
 

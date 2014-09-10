@@ -12,6 +12,6 @@ When /^I login with valid credentials$/ do
   on_page(HomePage).login
 end
 
-Then /^I became loginned$/ do
+Then /^I became logined$/ do
   on_page(HomePage).verify_loginned
 end
