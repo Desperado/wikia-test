@@ -3,8 +3,8 @@ require 'watir-webdriver'
 
 
 Before do
-  @browser = Watir::Browser.new ENV['BROWSER']
-
+  profile = Selenium::WebDriver::Firefox::Profile.new
+  @browser = Watir::Browser.new :firefox, profile: profile
 end
 
 
