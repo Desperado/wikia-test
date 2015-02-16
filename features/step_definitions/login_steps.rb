@@ -9,6 +9,7 @@ Then /^I am redirected to the correct home page "(.*?)"$/ do |page_url|
 end
 
 When /^I login with valid credentials$/ do
+  on_page(HomePage).account_navigation
   on_page(HomePage).login
 end
 
