@@ -5,7 +5,7 @@ class HomePage
   include DataMagic
 
   page_url("http://testhomework.wikia.com/")
-
+  div(:account_navigation, :css => ".account-navigation-container.table-cell")
   text_field(:username, :name => "username")
   text_field(:password, :name => "password")
   button(:signin, :css => "input.login-button")
@@ -14,7 +14,7 @@ class HomePage
   link(:add_video, :text => "Add a Video")
 
   def verify_page
-    username_element.when_present(30)
+    account_navigation_element.when_present(30)
   end
 
   def verify_url(page_url)
