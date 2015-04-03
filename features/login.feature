@@ -1,5 +1,5 @@
 Feature: Login to Wikia
-  As a user
+  Aeees a user
   I want to login to Wikia website
   So I can work inside it
 
