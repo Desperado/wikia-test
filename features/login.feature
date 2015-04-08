@@ -7,6 +7,4 @@ Feature: Login to Wikia
     Given I have opened the Home Page
 
   Scenario: Successful login
-    Then I am redirected to the correct home page "http://testhomework.wikia.com/wiki/Test-homework_Wiki"
-    When I login with valid credentials
-    Then I became loginned
+    Then I am redirected to the correct home page "http://community.wikia.com/wiki/Special:CloseWiki/information/testhomework"
